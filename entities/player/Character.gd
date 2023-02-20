@@ -5,6 +5,8 @@ class_name Character
 export (Resource) var physics = null
 export (Resource) var health = null
 
+onready var sprite = $AnimatedSprite
+
 
 func _ready():
 	pass
@@ -13,6 +15,7 @@ func _ready():
 func _physics_process(_delta):
 	_find_direction()
 	_motion()
+	_flip()
 	
 
 func _find_direction():
@@ -30,3 +33,11 @@ func _motion():
 
 func _on_death():
 	queue_free()
+
+
+func _flip():
+	var facing = get_global_mouse_position() - position
+	if facing.x > 0:
+		sprite.flip_h = false
+	else:
+		sprite.flip_h = true
