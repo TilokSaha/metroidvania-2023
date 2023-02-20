@@ -168,9 +168,9 @@ polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArra
 outlines = [ PoolVector2Array( 18, 35, 17, 144, 222, 143, 221, 119, 217, 110, 216, 71, 219.947, 67.7378, 219, 33, 220, 33 ) ]
 
 [sub_resource type="NavigationPolygon" id=11]
-vertices = PoolVector2Array( 254, 52, 255, 68, 221, 68, 238, 52, 220, 34, 236, 34 )
+vertices = PoolVector2Array( 254, 52, 255, 69, 220, 68, 238, 52, 220, 34, 236, 34 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ) ]
-outlines = [ PoolVector2Array( 220, 34, 221, 68, 255, 68, 254, 52, 238, 52, 236, 34 ) ]
+outlines = [ PoolVector2Array( 220, 34, 220, 68, 255, 69, 254, 52, 238, 52, 236, 34 ) ]
 
 [sub_resource type="NavigationPolygon" id=12]
 vertices = PoolVector2Array( 245, 116, 244, 68, 254, 68, 254, 142, 221, 141, 220, 118 )

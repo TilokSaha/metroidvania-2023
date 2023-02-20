@@ -9,7 +9,8 @@ onready var sprite = $AnimatedSprite
 
 
 func _ready():
-	pass
+	physics = physics.duplicate()
+	health = health.duplicate()
 
 
 func _physics_process(_delta):
