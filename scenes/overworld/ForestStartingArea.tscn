@@ -75,7 +75,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 1/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0.046936, 7.58418, 15.6755, 8.14233, 16, 48, 0, 48 )
+points = PoolVector2Array( 0.982376, 8.09479, 14.8718, 8.09479, 14.5488, 45.8871, 1.30538, 46.2101 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 16, 0, 16 )
@@ -163,19 +163,19 @@ points = PoolVector2Array( 16, 64, 32, 64, 32, 80, 16, 80 )
 3/z_index = 0
 
 [sub_resource type="NavigationPolygon" id=10]
-vertices = PoolVector2Array( 219, 33, 222, 143, 17, 144, 18, 35, 220, 33 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 0 ) ]
-outlines = [ PoolVector2Array( 18, 35, 17, 144, 222, 143, 219, 33, 220, 33 ) ]
+vertices = PoolVector2Array( 217, 110, 221, 119, 222, 143, 17, 144, 18, 35, 216, 71, 220, 33, 219.947, 67.7378, 219, 33 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 8 ) ]
+outlines = [ PoolVector2Array( 18, 35, 17, 144, 222, 143, 221, 119, 217, 110, 216, 71, 219.947, 67.7378, 219, 33, 220, 33 ) ]
 
 [sub_resource type="NavigationPolygon" id=11]
-vertices = PoolVector2Array( 221, 72, 220, 34, 236, 34, 238, 52, 254, 72, 254, 52 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ) ]
-outlines = [ PoolVector2Array( 220, 34, 221, 72, 254, 72, 254, 52, 238, 52, 236, 34 ) ]
+vertices = PoolVector2Array( 254, 52, 255, 68, 221, 68, 238, 52, 220, 34, 236, 34 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ) ]
+outlines = [ PoolVector2Array( 220, 34, 221, 68, 255, 68, 254, 52, 238, 52, 236, 34 ) ]
 
 [sub_resource type="NavigationPolygon" id=12]
-vertices = PoolVector2Array( 243, 113, 241, 74, 254, 74, 254, 142, 223, 142, 222, 114 )
+vertices = PoolVector2Array( 245, 116, 244, 68, 254, 68, 254, 142, 221, 141, 220, 118 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4, 5 ) ]
-outlines = [ PoolVector2Array( 222, 114, 223, 142, 254, 142, 254, 74, 241, 74, 243, 113 ) ]
+outlines = [ PoolVector2Array( 220, 118, 221, 141, 254, 142, 254, 68, 244, 68, 245, 116 ) ]
 
 [node name="ForestStartingArea" type="Node2D"]
 
@@ -215,4 +215,5 @@ navpoly = SubResource( 10 )
 navpoly = SubResource( 11 )
 
 [node name="NavigationPolygonInstance3" type="NavigationPolygonInstance" parent="NavigationArea"]
+position = Vector2( 1, 1 )
 navpoly = SubResource( 12 )
