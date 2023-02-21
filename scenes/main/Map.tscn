@@ -8,6 +8,9 @@
 [ext_resource path="res://globals/singletons/camera_settings.tscn" type="PackedScene" id=6]
 
 [node name="Map" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -7.0 ]
+}
 
 [node name="ForestStartingArea" parent="." instance=ExtResource( 1 )]
 

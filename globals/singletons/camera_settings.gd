@@ -4,6 +4,7 @@ extends Node2D
 onready var camera = $Camera2D
 onready var noise = OpenSimplexNoise.new()
 
+
 var SHAKE_STRENGTH: float = 0.0
 var DECAY_RATE: float = 3.0 
 var noise_i = 0.0
