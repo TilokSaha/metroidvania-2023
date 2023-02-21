@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/overworld/ForestStartingArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/enemies/Goblin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/tres/GoblinHealth.tres" type="Resource" id=4]
 [ext_resource path="res://resources/tres/GoblinPhysics.tres" type="Resource" id=5]
+[ext_resource path="res://globals/singletons/camera_settings.tscn" type="PackedScene" id=6]
 
 [node name="Map" type="Node2D"]
 
@@ -22,3 +23,5 @@ health = ExtResource( 4 )
 position = Vector2( 28, 131 )
 physics = ExtResource( 5 )
 health = ExtResource( 4 )
+
+[node name="camera_settings" parent="." instance=ExtResource( 6 )]
