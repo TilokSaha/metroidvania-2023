@@ -36,7 +36,7 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "Run",
-"speed": 5.0
+"speed": 12.0
 } ]
 
 [node name="Goblin" instance=ExtResource( 1 )]
@@ -49,5 +49,5 @@ shape = SubResource( 8 )
 [node name="AnimatedSprite" parent="." index="4"]
 frames = SubResource( 7 )
 animation = "Run"
-frame = 4
+frame = 1
 playing = true
