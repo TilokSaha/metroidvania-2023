@@ -157,9 +157,9 @@ points = PoolVector2Array( 16, 64, 32, 64, 32, 80, 16, 80 )
 3/z_index = 0
 
 [sub_resource type="NavigationPolygon" id=10]
-vertices = PoolVector2Array( 217, 110, 221, 119, 222, 143, 17, 144, 18, 35, 216, 71, 220, 33, 219.947, 67.7378, 219, 33 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 8 ) ]
-outlines = [ PoolVector2Array( 18, 35, 17, 144, 222, 143, 221, 119, 217, 110, 216, 71, 219.947, 67.7378, 219, 33, 220, 33 ) ]
+vertices = PoolVector2Array( 217, 110, 221, 119, 222, 143, 17, 144, 17.7559, 61.6106, 216, 71, -41, 35, 220, 34, 219.947, 67.7378, -42, 59 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4, 6 ), PoolIntArray( 6, 7, 8, 5 ), PoolIntArray( 6, 4, 9 ) ]
+outlines = [ PoolVector2Array( -41, 35, -42, 59, 17.7559, 61.6106, 17, 144, 222, 143, 221, 119, 217, 110, 216, 71, 219.947, 67.7378, 220, 34 ) ]
 
 [sub_resource type="NavigationPolygon" id=11]
 vertices = PoolVector2Array( 238, 52, 254, 52, 255, 68, 245.563, 68, 244, 67, 220, 68, 220, 34, 236, 34 )
