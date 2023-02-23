@@ -148,6 +148,7 @@ animations = [ {
 } ]
 
 [node name="Player" instance=ExtResource( 1 )]
+collision_mask = 0
 script = ExtResource( 2 )
 physics = ExtResource( 3 )
 health = ExtResource( 4 )

@@ -1,9 +1,8 @@
 extends FiniteStateMachine
 class_name State
 
-
-onready var animation_player = owner.find_node("AnimationPlayer")
 export (String) var state_name = ""
+onready var animation_player = owner.find_node("AnimationPlayer")
 
 
 func _process(_delta):
