@@ -82,9 +82,33 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=9]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=11]
 resource_name = "Run"
@@ -113,6 +137,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="AtlasTexture" id=21]
@@ -268,8 +304,7 @@ anims/Run = SubResource( 11 )
 
 [node name="AnimatedSprite" parent="." index="4"]
 frames = SubResource( 6 )
-animation = "Attack"
-frame = 7
+animation = "Run"
 offset = Vector2( 0, -7 )
 
 [node name="HitBox" type="Area2D" parent="." index="6"]
@@ -279,6 +314,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2( 0, 1 )
 shape = SubResource( 35 )
+disabled = true
 
 [node name="BossStateMachine" type="Node2D" parent="." index="7"]
 script = ExtResource( 8 )

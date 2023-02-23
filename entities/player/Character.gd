@@ -6,6 +6,8 @@ export (Resource) var physics = null
 export (Resource) var health = null
 
 onready var sprite = $AnimatedSprite
+onready var effect = $Effect
+onready var camera = get_parent().find_node("camera_settings")
 
 
 func _ready():
@@ -38,7 +40,8 @@ func hurt(amount):
 
 
 func _on_health_changed(_damage):
-	print(health.health)
+	effect.play("Hit_Effect")
+	camera.apply_shake(10)
 
 
 func _on_death():
