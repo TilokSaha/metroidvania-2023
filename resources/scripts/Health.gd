@@ -1,20 +1,16 @@
 extends Resource
 class_name Health
 
-export (int) var max_health = 5
-var current_health: int 
+export (int) var health = 5
 
 signal health_changed(damage)
 signal dead
-
-func _init():
-	current_health =  max_health
 	
 
 func take_damage(amount):
-	current_health -= amount
+	health -= amount
 	
-	if current_health <= 0:
+	if health <= 0:
 		emit_signal("dead")
 		return
 	

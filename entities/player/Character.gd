@@ -38,7 +38,7 @@ func hurt(amount):
 
 
 func _on_health_changed(_damage):
-	print(health.current_health)
+	print(health.health)
 
 
 func _on_death():
