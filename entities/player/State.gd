@@ -1,6 +1,7 @@
 extends FiniteStateMachine
 class_name State
 
+onready var player = owner.get_parent().find_node("Player")
 export (String) var state_name = ""
 onready var animation_player = owner.find_node("AnimationPlayer")
 
