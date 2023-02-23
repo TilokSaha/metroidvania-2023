@@ -33,3 +33,5 @@ position = Vector2( 248, 92 )
 
 [node name="ForestBeastBoss" parent="." instance=ExtResource( 3 )]
 position = Vector2( -311, 52 )
+collision_layer = 1
+collision_mask = 1

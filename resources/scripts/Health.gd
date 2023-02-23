@@ -1,7 +1,7 @@
 extends Resource
 class_name Health
 
-export (int) var max_health = 4
+export (int) var max_health = 5
 var current_health: int 
 
 signal health_changed(damage)

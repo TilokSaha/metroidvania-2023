@@ -12,12 +12,14 @@ func _find_direction():
 	_update_player_location()
 	
 func _update_player_location():
-	_agent.set_target_location(player.position)
+	if is_instance_valid(player):
+		_agent.set_target_location(player.position)
 
 
 func _flip():
-	var facing = player.position - position
-	if facing.x > 0:
-		sprite.flip_h = false
-	else:
-		sprite.flip_h = true
+	if is_instance_valid(player):
+		var facing = player.position - position
+		if facing.x > 0:
+			sprite.flip_h = false
+		else:
+			sprite.flip_h = true

@@ -15,8 +15,9 @@ func _ready():
 
 
 func _process(_delta):
-	tween.interpolate_property(self, "position", position, _get_position() + _mouse_offset(),0.9,Tween.TRANS_QUINT, Tween.EASE_OUT)
-	tween.start()
+	if is_instance_valid(player_position):
+		tween.interpolate_property(self, "position", position, _get_position() + _mouse_offset(),0.9,Tween.TRANS_QUINT, Tween.EASE_OUT)
+		tween.start()
 
 
 func _get_position():
