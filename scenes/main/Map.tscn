@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/overworld/ForestStartingArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,11 @@ vertices = PoolVector2Array( -428, 72, -424, -81, -407, -58, -412, 77, -427, 94,
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 0 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 10, 6, 9, 11 ), PoolIntArray( 12, 10, 11, 13, 14, 15 ), PoolIntArray( 16, 17, 18, 19 ), PoolIntArray( 20, 21, 22, 15 ), PoolIntArray( 23, 24, 25, 26 ), PoolIntArray( 27, 28, 29, 30 ), PoolIntArray( 31, 3, 2, 19, 32 ), PoolIntArray( 33, 23, 26, 34, 12, 35 ), PoolIntArray( 29, 36, 37, 30 ), PoolIntArray( 32, 38, 39, 31 ), PoolIntArray( 32, 19, 18, 30, 37 ), PoolIntArray( 40, 32, 37, 14, 13 ), PoolIntArray( 15, 22, 41, 42 ), PoolIntArray( 12, 15, 42 ), PoolIntArray( 12, 42, 35 ) ]
 outlines = [ PoolVector2Array( -368, -88, -368, -64, -407, -58, -424, -81, -428, 72, -429, 81, -427, 94, -412, 77, -387, 107, -351, 155, -71, 154, -59, 128, -39, 104, -35, 65, -26, 58, 19, 61, 20, 139, 218, 140, 217, 35, 1, 33, -38, 16, -33, -62, -62, -70, -65, -92, -89, -92, -91, -70, -110, -64, -112, -48, -131, -45, -135, -65, -154, -76, -156, -93, -198, -91, -217, -51, -222, -45, -247, -45, -244, -67, -265, -77, -268, -93, -331, -92, -338, -74, -351, -72, -356, -91 ) ]
 
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 217, 143, 217, 115, 234, 116, 255, 144, 242, 115, 254, 56, 243, 103, 241, 67, 248, 54, 222, 70, 223, 115, 218, 35, 226, 65, 237, 35, 241, 47 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4 ), PoolIntArray( 5, 3, 4, 6 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 1, 11 ), PoolIntArray( 12, 9, 11, 13 ), PoolIntArray( 12, 13, 14, 7 ), PoolIntArray( 7, 14, 8 ) ]
+outlines = [ PoolVector2Array( 218, 35, 237, 35, 241, 47, 248, 54, 254, 56, 255, 144, 217, 143, 217, 115, 234, 116, 242, 115, 243, 103, 241, 67, 226, 65, 222, 70, 223, 115, 217, 115 ) ]
+
 [node name="Map" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ -7.0 ]
@@ -20,6 +25,9 @@ __meta__ = {
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation"]
 navpoly = SubResource( 1 )
+
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Navigation"]
+navpoly = SubResource( 2 )
 
 [node name="camera_settings" parent="." instance=ExtResource( 6 )]
 
@@ -32,6 +40,4 @@ position = Vector2( -432, -96 )
 position = Vector2( 248, 92 )
 
 [node name="ForestBeastBoss" parent="." instance=ExtResource( 3 )]
-position = Vector2( -311, 52 )
-collision_layer = 1
-collision_mask = 1
+position = Vector2( -310, 42 )
