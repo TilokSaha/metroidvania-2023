@@ -56,7 +56,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=36]
 resource_name = "Dead"
-length = 0.6
+length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -139,42 +139,6 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=9]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("HitBox/CollisionShape2D:disabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AnimatedSprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Effects:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 5 ]
-}
 
 [sub_resource type="Animation" id=11]
 resource_name = "Run"
@@ -372,7 +336,6 @@ anims/Run = SubResource( 11 )
 [node name="AnimatedSprite" parent="." index="4"]
 frames = SubResource( 6 )
 animation = "Dead"
-frame = 1
 offset = Vector2( 0, -7 )
 
 [node name="HitBox" type="Area2D" parent="." index="6"]
@@ -401,5 +364,6 @@ state_name = "Attack"
 
 [node name="Dead" type="Node2D" parent="BossStateMachine" index="3"]
 script = ExtResource( 10 )
+state_name = "Dead"
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
