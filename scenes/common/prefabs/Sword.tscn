@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/common/prefabs/Weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/common/prefabs/Sword.gd" type="Script" id=2]
 [ext_resource path="res://entities/player/weapon_sword_1.png" type="Texture" id=3]
+[ext_resource path="res://scenes/common/prefabs/Aura.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.5, 12 )
@@ -132,6 +133,9 @@ rotation = -2.35619
 texture = ExtResource( 3 )
 offset = Vector2( 5, -4 )
 
+[node name="Hitbox" parent="." index="2"]
+collision_mask = 5
+
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( 12.5, -1 )
 shape = SubResource( 1 )
@@ -140,5 +144,11 @@ disabled = true
 [node name="AnimationPlayer" parent="." index="3"]
 anims/Attack = SubResource( 2 )
 anims/RESET = SubResource( 3 )
+
+[node name="Aura" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( 6, 1 )
+rotation = 1.5708
+emitting = false
+amount = 12
 
 [editable path="Hitbox"]

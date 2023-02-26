@@ -1,5 +1,9 @@
 extends Enemy
 
+
+signal dead
+
+
 func _ready():
 	set_physics_process(false)
 
@@ -8,4 +12,4 @@ func _on_HitBox_body_entered(body):
 		body.hurt(1)
 
 func _on_death():
-	pass
+	emit_signal("dead")

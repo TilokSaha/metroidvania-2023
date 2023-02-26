@@ -164,7 +164,7 @@ tile_set = SubResource( 7 )
 cell_size = Vector2( 16, 16 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( -131058, 3, 0, 65545, 1, 0, 131085, 2, 0, 196610, 2, 0, 262158, 0, 0, 458766, 2, 0, 524293, 2, 0 )
+tile_data = PoolIntArray( -131058, 3, 0, 131085, 2, 0, 196610, 2, 0, 262158, 0, 0, 458766, 2, 0, 524293, 2, 0 )
 
 [node name="BackgroundLayer2" type="TileMap" parent="."]
 z_index = -98
