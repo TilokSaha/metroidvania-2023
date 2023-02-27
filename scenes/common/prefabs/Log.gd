@@ -8,7 +8,7 @@ func _on_ForestBeastBoss_dead():
 	boss_defeated = true
 	get_node("Aura").emitting = true
 	
-func hurt(damage):
+func hurt(_damage):
 	if boss_defeated:
 		queue_free()
 

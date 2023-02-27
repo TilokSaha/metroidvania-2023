@@ -9,7 +9,7 @@ func _ready():
 
 
 func _respawn():
-	get_tree().change_scene("res://scenes/main/Map.tscn")
+	var __ = get_tree().change_scene("res://scenes/main/Map.tscn")
 #	var new_player = player.instance()
 #	get_tree().current_scene.call_deferred("add_child", new_player)
 #	new_player.position = position
