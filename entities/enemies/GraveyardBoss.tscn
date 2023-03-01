@@ -1,8 +1,9 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://entities/enemies/ForestBeastBoss.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/enemies/Brain Mole Monarch Sprite Sheet.png" type="Texture" id=2]
 [ext_resource path="res://scenes/common/assets/EnemyDeathEffect.png" type="Texture" id=3]
+[ext_resource path="res://scenes/common/assets/PNG (Transparent)/circle_05.png" type="Texture" id=4]
 
 [sub_resource type="Gradient" id=64]
 offsets = PoolRealArray( 0, 0.731915, 1 )
@@ -172,3 +173,9 @@ animation = "Attack"
 
 [node name="Run" parent="BossStateMachine" index="1"]
 state_name = "Idle"
+
+[node name="Light2D" type="Light2D" parent="." index="12"]
+texture = ExtResource( 4 )
+texture_scale = 0.2
+energy = 0.9
+mode = 2
