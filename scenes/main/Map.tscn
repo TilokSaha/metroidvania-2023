@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/overworld/ForestStartingArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=2]
@@ -25,6 +25,11 @@ vertices = PoolVector2Array( 235, -177, 249, -170, 248, -145, 221, -148, 175, -1
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12, 13, 14, 15, 16 ), PoolIntArray( 9, 16, 17, 18 ), PoolIntArray( 18, 17, 19, 8, 20 ), PoolIntArray( 8, 19, 21, 4, 5 ), PoolIntArray( 4, 22, 0 ), PoolIntArray( 5, 4, 3 ) ]
 outlines = [ PoolVector2Array( -270, -324, -266, -154, -236, -142, -64, -145, -23, -169, 13, -140, 12, -15, 225, -7, 249, -46, 248, -89, 221, -88, 221, -148, 248, -145, 249, -170, 235, -177, 231, -194, 175, -188, 87, -192, 57, -180, 39, -190, 31, -216, 32, -260, 29, -331 ) ]
 
+[sub_resource type="NavigationPolygon" id=4]
+vertices = PoolVector2Array( 179, -9, 180, 34, 158, 33, 157, -9 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 157, -9, 158, 33, 180, 34, 179, -9 ) ]
+
 [node name="Map" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ -7.0 ]
@@ -41,6 +46,9 @@ navpoly = SubResource( 2 )
 [node name="NavigationPolygonInstance3" type="NavigationPolygonInstance" parent="Navigation"]
 navpoly = SubResource( 3 )
 
+[node name="NavigationPolygonInstance4" type="NavigationPolygonInstance" parent="Navigation"]
+navpoly = SubResource( 4 )
+
 [node name="camera_settings" parent="." instance=ExtResource( 6 )]
 
 [node name="ForestStartingArea" parent="." instance=ExtResource( 1 )]
@@ -52,7 +60,7 @@ position = Vector2( -432, -96 )
 position = Vector2( 168, 24 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 229, 129 )
+position = Vector2( 234, 124 )
 z_index = 1
 
 [node name="ForestBeastBoss" parent="." instance=ExtResource( 3 )]
@@ -67,5 +75,8 @@ position = Vector2( 64, 0 )
 
 [node name="GraveyardBoss" parent="." instance=ExtResource( 9 )]
 position = Vector2( -192, -224 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.345098, 0.52549, 0.67451, 1 )
 
 [connection signal="dead" from="ForestBeastBoss" to="Log" method="_on_ForestBeastBoss_dead"]

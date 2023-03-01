@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/overworld/ForestStartingArea.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/overworld/assets/PixiVan Forest (Beta)/Environment.png" type="Texture" id=2]
@@ -6,8 +6,14 @@
 [ext_resource path="res://scenes/overworld/assets/Overworld.png" type="Texture" id=4]
 [ext_resource path="res://scenes/overworld/assets/PixiVan Forest (Beta)/Trees.png" type="Texture" id=5]
 
+[sub_resource type="OccluderPolygon2D" id=19]
+polygon = PoolVector2Array( 0, 0, 48, 0, 48, 32, 0, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 32, 0, 32 )
+
+[sub_resource type="OccluderPolygon2D" id=20]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
@@ -20,6 +26,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 0/region = Rect2( 112, 48, 48, 32 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 19 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -41,6 +48,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 1/region = Rect2( 160, 48, 16, 32 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 20 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -56,11 +64,20 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
 } ]
 1/z_index = 0
 
+[sub_resource type="OccluderPolygon2D" id=23]
+polygon = PoolVector2Array( 5.69833, 7.61028, 10.3497, 7.22267, 11.9001, 10.3236, 12.6754, 15.3625, 15.0011, 17.3006, 15.0011, 19.6263, 13.063, 25.0529, 12.2878, 26.991, 13.4506, 30.4795, 14.6134, 31.6423, 15.0011, 34.7432, 15.0011, 44.0459, 15.0011, 46.3716, 1.43459, 47.5345, 0.659363, 31.6423, 3.76027, 28.1538, 3.37266, 24.2776, 1.04697, 18.4635, 2.20982, 16.1378, 4.14788, 14.5873, 3.76027, 10.7112 )
+
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0.982376, 8.09479, 14.8718, 8.09479, 14.5488, 45.8871, 1.30538, 46.2101 )
 
+[sub_resource type="OccluderPolygon2D" id=21]
+polygon = PoolVector2Array( 0, 0, 48, 0, 48, 16, 0, 16 )
+
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=22]
+polygon = PoolVector2Array( 18.8986, 3.28021, 6.17248, 38.7794, 5.50269, 52.8451, 10.8611, 64.2316, 19.5684, 69.59, 19.5684, 76.9578, 27.6059, 78.2973, 28.9455, 66.241, 39.6623, 58.8733, 44.3508, 49.4961, 42.3415, 41.4586, 37.6529, 30.0721, 34.3039, 19.3553, 26.2663, 6.62918 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 16, 64, 32, 64, 32, 80, 16, 80 )
@@ -73,6 +90,7 @@ points = PoolVector2Array( 16, 64, 32, 64, 32, 80, 16, 80 )
 0/region = Rect2( 0, 48, 16, 48 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 23 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -94,6 +112,7 @@ points = PoolVector2Array( 16, 64, 32, 64, 32, 80, 16, 80 )
 1/region = Rect2( 48, 80, 48, 16 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
+1/occluder = SubResource( 21 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -129,6 +148,7 @@ points = PoolVector2Array( 16, 64, 32, 64, 32, 80, 16, 80 )
 3/region = Rect2( 80, 240, 48, 96 )
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
+3/occluder = SubResource( 22 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
