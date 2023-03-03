@@ -160,4 +160,5 @@ common/enable_pause_aware_picking=true
 
 gles3/shaders/shader_compilation_mode=2
 gles3/shaders/max_simultaneous_compiles=1
+environment/default_clear_color=Color( 0.0588235, 0.0588235, 0.0588235, 1 )
 environment/default_environment="res://default_env.tres"

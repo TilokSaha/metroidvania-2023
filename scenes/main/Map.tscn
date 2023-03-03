@@ -108,15 +108,15 @@ frame = 0
 
 [node name="WallTorch" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( -137, -361 )
-frame = 4
+frame = 2
 
 [node name="WallTorch2" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( 160, -230 )
-frame = 3
+frame = 1
 
 [node name="WallTorch3" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( 16, -377 )
-frame = 3
+frame = 1
 
 [node name="Green Glow" parent="LightSource" instance=ExtResource( 13 )]
 position = Vector2( -112, -241 )
@@ -125,14 +125,14 @@ energy = 1.2
 
 [node name="WallTorch4" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( -280, -203 )
-frame = 2
 
 [node name="WallTorch5" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( 55, -333 )
-frame = 1
+frame = 5
 
 [node name="WallTorch6" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( -295, -410 )
+frame = 4
 
 [node name="Candles3" parent="LightSource" instance=ExtResource( 11 )]
 position = Vector2( -130, -147 )
