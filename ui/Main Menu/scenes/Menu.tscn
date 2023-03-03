@@ -1,0 +1,250 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui/Main Menu/assets/DarkTheme/DarkTheme/Dark.theme" type="Theme" id=1]
+[ext_resource path="res://ui/Main Menu/scripts/ActionToggleButton.gd" type="Script" id=2]
+[ext_resource path="res://ui/Main Menu/scripts/Menu.gd" type="Script" id=3]
+
+[node name="Menu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="MainMenu" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Continue" type="Button" parent="MainMenu/VBoxContainer"]
+visible = false
+margin_right = 82.0
+margin_bottom = 20.0
+text = "Continue"
+
+[node name="Start" type="Button" parent="MainMenu/VBoxContainer"]
+margin_right = 77.0
+margin_bottom = 18.0
+focus_neighbour_top = NodePath("../Exit")
+text = "New Game"
+
+[node name="Options" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 21.0
+margin_right = 77.0
+margin_bottom = 39.0
+text = "Options"
+
+[node name="Exit" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 42.0
+margin_right = 77.0
+margin_bottom = 60.0
+focus_neighbour_bottom = NodePath("../Start")
+text = "Exit"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/HBoxContainer"]
+margin_right = 126.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+
+[node name="Master Volume" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
+margin_right = 126.0
+margin_bottom = 18.4
+size_flags_vertical = 5
+text = "Master Volume"
+
+[node name="Music Volume" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
+margin_top = 21.0
+margin_right = 126.0
+margin_bottom = 39.4
+size_flags_vertical = 5
+text = "Music Volume"
+
+[node name="Sound Effects" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 126.0
+margin_bottom = 60.4
+size_flags_vertical = 5
+text = "Sound Effects"
+
+[node name="Full Screen" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
+margin_top = 63.0
+margin_right = 126.0
+margin_bottom = 81.4
+size_flags_vertical = 5
+text = "Full Screen"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Options/HBoxContainer"]
+margin_left = 129.0
+margin_right = 256.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+custom_constants/separation = 9
+
+[node name="Master Volume" type="HSlider" parent="Options/HBoxContainer/VBoxContainer2"]
+margin_right = 127.0
+margin_bottom = 16.0
+value = 50.0
+
+[node name="Music Volume" type="HSlider" parent="Options/HBoxContainer/VBoxContainer2"]
+margin_top = 25.0
+margin_right = 127.0
+margin_bottom = 41.0
+value = 50.0
+
+[node name="Sound Effects" type="HSlider" parent="Options/HBoxContainer/VBoxContainer2"]
+margin_top = 50.0
+margin_right = 127.0
+margin_bottom = 66.0
+value = 50.0
+
+[node name="CheckButton" type="CheckButton" parent="Options/HBoxContainer/VBoxContainer2"]
+margin_top = 75.0
+margin_right = 127.0
+margin_bottom = 107.0
+size_flags_vertical = 0
+pressed = true
+
+[node name="Button" type="Button" parent="Options"]
+anchor_left = 0.5
+anchor_top = 0.96
+anchor_right = 0.527
+anchor_bottom = 0.96
+margin_left = -22.0
+margin_top = -20.0
+margin_right = 22.0
+text = "Back"
+
+[node name="Button2" type="Button" parent="Options"]
+anchor_left = 0.027
+anchor_top = 0.742
+anchor_right = 0.027
+anchor_bottom = 0.742
+margin_top = -9.0
+margin_right = 140.0
+margin_bottom = 9.0
+text = "Remap controls"
+
+[node name="Controls" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Controls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/HBoxContainer"]
+margin_right = 53.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+
+[node name="Action" type="Label" parent="Controls/HBoxContainer/VBoxContainer"]
+margin_top = -1.0
+margin_right = 53.0
+margin_bottom = 17.4
+text = "UP"
+
+[node name="Action2" type="Label" parent="Controls/HBoxContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 53.0
+margin_bottom = 38.4
+text = "DOWn"
+
+[node name="Action3" type="Label" parent="Controls/HBoxContainer/VBoxContainer"]
+margin_top = 41.0
+margin_right = 53.0
+margin_bottom = 59.4
+text = "LEFT"
+
+[node name="Action4" type="Label" parent="Controls/HBoxContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 53.0
+margin_bottom = 80.4
+text = "RIGHT"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Controls/HBoxContainer"]
+margin_left = 203.0
+margin_right = 256.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+custom_constants/separation = 5
+
+[node name="ActionToggleButton" type="Button" parent="Controls/HBoxContainer/VBoxContainer2"]
+margin_right = 53.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 30, 0 )
+toggle_mode = true
+script = ExtResource( 2 )
+
+[node name="ActionToggleButton2" type="Button" parent="Controls/HBoxContainer/VBoxContainer2"]
+margin_top = 23.0
+margin_right = 53.0
+margin_bottom = 41.0
+toggle_mode = true
+script = ExtResource( 2 )
+action = "ui_down"
+
+[node name="ActionToggleButton3" type="Button" parent="Controls/HBoxContainer/VBoxContainer2"]
+margin_top = 46.0
+margin_right = 53.0
+margin_bottom = 64.0
+toggle_mode = true
+script = ExtResource( 2 )
+action = "ui_left"
+
+[node name="ActionToggleButton4" type="Button" parent="Controls/HBoxContainer/VBoxContainer2"]
+margin_top = 69.0
+margin_right = 53.0
+margin_bottom = 87.0
+toggle_mode = true
+script = ExtResource( 2 )
+action = "ui_right"
+
+[node name="Button" type="Button" parent="Controls"]
+anchor_left = 0.5
+anchor_top = 0.96
+anchor_right = 0.5
+anchor_bottom = 0.96
+margin_left = -22.0
+margin_top = -18.0
+margin_right = 22.0
+text = "Back"
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="value_changed" from="Options/HBoxContainer/VBoxContainer2/Master Volume" to="." method="_on_Master_Volume_value_changed"]
+[connection signal="value_changed" from="Options/HBoxContainer/VBoxContainer2/Music Volume" to="." method="_on_Music_Volume_value_changed"]
+[connection signal="value_changed" from="Options/HBoxContainer/VBoxContainer2/Sound Effects" to="." method="_on_Sound_Effects_value_changed"]
+[connection signal="pressed" from="Options/HBoxContainer/VBoxContainer2/CheckButton" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="Options/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Options/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Controls/Button" to="." method="_on_Button_pressed"]

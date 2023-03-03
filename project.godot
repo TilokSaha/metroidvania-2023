@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Metroidvania 2023'"
-run/main_scene="res://scenes/main/Map.tscn"
+run/main_scene="res://ui/Main Menu/scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

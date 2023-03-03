@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/htick.png-6a63ec9acf7da1f8992e0e54121afb61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://ui/Main Menu/assets/htick.png"
+dest_files=[ "res://.import/htick.png-6a63ec9acf7da1f8992e0e54121afb61.stex" ]
 
 [params]
 
