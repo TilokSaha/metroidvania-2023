@@ -1,5 +1,12 @@
 extends Control
 
+onready var master__volume = $"Options/HBoxContainer/VBoxContainer2/Master Volume"
+onready var music__volume = $"Options/HBoxContainer/VBoxContainer2/Music Volume"
+onready var sound__effects = $"Options/HBoxContainer/VBoxContainer2/Sound Effects"
+
+
+
+
 func _ready():
 	$MainMenu/VBoxContainer/Start.grab_focus()
 	OS.window_fullscreen = true
@@ -7,6 +14,10 @@ func _ready():
 	
 	OS.vsync_enabled = false
 	OS.delta_smoothing = false
+	
+	master__volume.value = db2linear(AudioServer.get_bus_volume_db(0))
+	music__volume.value = db2linear(AudioServer.get_bus_volume_db(1))
+	sound__effects.value = db2linear(AudioServer.get_bus_volume_db(2))
 	
 	center()
 	
