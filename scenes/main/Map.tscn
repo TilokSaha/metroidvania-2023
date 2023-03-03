@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/overworld/ForestStartingArea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://scenes/common/prefabs/Candles.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/common/prefabs/WallTorch.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/common/prefabs/Green Glow.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/main/Map.gd" type="Script" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -428, 72, -424, -81, -407, -58, -412, 77, -427, 94, -429, 81, 217, 35, 218, 140, 20, 139, 19, 61, 1, 33, -26, 58, -38, 16, -35, 65, -222, -45, -217, -51, -368, -88, -356, -91, -351, -72, -368, -64, -198, -91, -156, -93, -154, -76, -91, -70, -89, -92, -65, -92, -62, -70, -331, -92, -268, -93, -265, -77, -338, -74, -387, 107, -59, 128, -110, -64, -33, -62, -112, -48, -244, -67, -247, -45, -71, 154, -351, 155, -39, 104, -135, -65, -131, -45 )
@@ -35,6 +36,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 157, -9, 158, 33, 180, 34, 179, -9 ) ]
 
 [node name="Map" type="Node2D"]
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -7.0 ]
 }
@@ -64,7 +66,7 @@ position = Vector2( -432, -96 )
 position = Vector2( 168, 24 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 231, 127 )
+position = Vector2( 231, 124 )
 z_index = 1
 
 [node name="ForestBeastBoss" parent="." instance=ExtResource( 3 )]
@@ -87,38 +89,56 @@ color = Color( 0.345098, 0.52549, 0.67451, 1 )
 
 [node name="Torch" parent="LightSource" instance=ExtResource( 10 )]
 position = Vector2( -24, -4 )
-frame = 3
+frame = 0
 
 [node name="Torch2" parent="LightSource" instance=ExtResource( 10 )]
 position = Vector2( -24, 75 )
-frame = 3
+frame = 0
 
 [node name="Candles" parent="LightSource" instance=ExtResource( 11 )]
 position = Vector2( 214, 102 )
-frame = 1
 
 [node name="Torch3" parent="LightSource" instance=ExtResource( 10 )]
 position = Vector2( 219, -119 )
+frame = 2
 
 [node name="Candles2" parent="LightSource" instance=ExtResource( 11 )]
 position = Vector2( 69, -196 )
-frame = 3
+frame = 0
 
 [node name="WallTorch" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( -137, -361 )
-frame = 5
+frame = 4
 
 [node name="WallTorch2" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( 160, -230 )
-frame = 4
+frame = 3
 
 [node name="WallTorch3" parent="LightSource" instance=ExtResource( 12 )]
 position = Vector2( 16, -377 )
-frame = 4
+frame = 3
 
 [node name="Green Glow" parent="LightSource" instance=ExtResource( 13 )]
 position = Vector2( -112, -241 )
 texture_scale = 0.3
 energy = 1.2
+
+[node name="WallTorch4" parent="LightSource" instance=ExtResource( 12 )]
+position = Vector2( -280, -203 )
+frame = 2
+
+[node name="WallTorch5" parent="LightSource" instance=ExtResource( 12 )]
+position = Vector2( 55, -333 )
+frame = 1
+
+[node name="WallTorch6" parent="LightSource" instance=ExtResource( 12 )]
+position = Vector2( -295, -410 )
+
+[node name="Candles3" parent="LightSource" instance=ExtResource( 11 )]
+position = Vector2( -130, -147 )
+
+[node name="Candles4" parent="LightSource" instance=ExtResource( 11 )]
+position = Vector2( 41, -55 )
+frame = 1
 
 [connection signal="dead" from="ForestBeastBoss" to="Log" method="_on_ForestBeastBoss_dead"]

@@ -7,4 +7,8 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
+[node name="HitSoundFX" type="AudioStreamPlayer" parent="."]
+volume_db = -50.0
+bus = "Sound FX"
+
 [connection signal="body_entered" from="." to="." method="_on_Hitbox_body_entered"]
