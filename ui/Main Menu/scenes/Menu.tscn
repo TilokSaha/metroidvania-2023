@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ui/Main Menu/assets/DarkTheme/DarkTheme/Dark.theme" type="Theme" id=1]
 [ext_resource path="res://ui/Main Menu/scripts/ActionToggleButton.gd" type="Script" id=2]
 [ext_resource path="res://ui/Main Menu/scripts/Menu.gd" type="Script" id=3]
 
@@ -11,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="MainMenu" type="Control" parent="."]
@@ -36,21 +34,21 @@ margin_bottom = 20.0
 text = "Continue"
 
 [node name="Start" type="Button" parent="MainMenu/VBoxContainer"]
-margin_right = 77.0
-margin_bottom = 18.0
+margin_right = 82.0
+margin_bottom = 20.0
 focus_neighbour_top = NodePath("../Exit")
 text = "New Game"
 
 [node name="Options" type="Button" parent="MainMenu/VBoxContainer"]
-margin_top = 21.0
-margin_right = 77.0
-margin_bottom = 39.0
+margin_top = 24.0
+margin_right = 82.0
+margin_bottom = 44.0
 text = "Options"
 
 [node name="Exit" type="Button" parent="MainMenu/VBoxContainer"]
-margin_top = 42.0
-margin_right = 77.0
-margin_bottom = 60.0
+margin_top = 48.0
+margin_right = 82.0
+margin_bottom = 68.0
 focus_neighbour_bottom = NodePath("../Start")
 text = "Exit"
 
