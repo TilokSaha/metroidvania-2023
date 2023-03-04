@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grapper.png-04d80a7abde6ace7673e02cf23ac9dae.stex"
+path="res://.import/UnCheckedBox.png-4472ea74cacd1c3ee5937c864953712f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Main Menu/assets/DarkTheme/DarkTheme/Icons/Grapper.png"
-dest_files=[ "res://.import/Grapper.png-04d80a7abde6ace7673e02cf23ac9dae.stex" ]
+source_file="res://ui/Main Menu/assets/DarkTheme/Icons/UnCheckedBox.png"
+dest_files=[ "res://.import/UnCheckedBox.png-4472ea74cacd1c3ee5937c864953712f.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

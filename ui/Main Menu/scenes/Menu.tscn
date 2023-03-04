@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://ui/Main Menu/assets/DarkTheme/Dark.theme" type="Theme" id=1]
 [ext_resource path="res://ui/Main Menu/scripts/ActionToggleButton.gd" type="Script" id=2]
 [ext_resource path="res://ui/Main Menu/scripts/Menu.gd" type="Script" id=3]
+[ext_resource path="res://ui/Main Menu/assets/DarkTheme/Icons/CheckedBox.png" type="Texture" id=4]
+[ext_resource path="res://ui/Main Menu/assets/DarkTheme/Icons/UnCheckedBox.png" type="Texture" id=5]
 
 [node name="Menu" type="Control"]
 pause_mode = 2
@@ -10,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="MainMenu" type="Control" parent="."]
@@ -34,21 +38,21 @@ margin_bottom = 20.0
 text = "Continue"
 
 [node name="Start" type="Button" parent="MainMenu/VBoxContainer"]
-margin_right = 82.0
-margin_bottom = 20.0
+margin_right = 59.0
+margin_bottom = 13.0
 focus_neighbour_top = NodePath("../Exit")
 text = "New Game"
 
 [node name="Options" type="Button" parent="MainMenu/VBoxContainer"]
-margin_top = 24.0
-margin_right = 82.0
-margin_bottom = 44.0
+margin_top = 16.0
+margin_right = 59.0
+margin_bottom = 29.0
 text = "Options"
 
 [node name="Exit" type="Button" parent="MainMenu/VBoxContainer"]
-margin_top = 48.0
-margin_right = 82.0
-margin_bottom = 68.0
+margin_top = 32.0
+margin_right = 59.0
+margin_bottom = 45.0
 focus_neighbour_bottom = NodePath("../Start")
 text = "Exit"
 
@@ -56,6 +60,17 @@ text = "Exit"
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="Full Screen" type="Label" parent="Options"]
+anchor_left = 0.081
+anchor_top = 0.121
+anchor_right = 0.081
+anchor_bottom = 0.121
+margin_top = 54.0
+margin_right = 126.0
+margin_bottom = 69.4
+size_flags_vertical = 5
+text = "Full Screen"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Options"]
 anchor_right = 1.0
@@ -68,30 +83,23 @@ size_flags_horizontal = 3
 
 [node name="Master Volume" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
 margin_right = 126.0
-margin_bottom = 18.4
+margin_bottom = 15.4
 size_flags_vertical = 5
 text = "Master Volume"
 
 [node name="Music Volume" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
-margin_top = 21.0
+margin_top = 18.0
 margin_right = 126.0
-margin_bottom = 39.4
+margin_bottom = 33.4
 size_flags_vertical = 5
 text = "Music Volume"
 
 [node name="Sound Effects" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
-margin_top = 42.0
+margin_top = 36.0
 margin_right = 126.0
-margin_bottom = 60.4
+margin_bottom = 51.4
 size_flags_vertical = 5
 text = "Sound Effects"
-
-[node name="Full Screen" type="Label" parent="Options/HBoxContainer/VBoxContainer"]
-margin_top = 63.0
-margin_right = 126.0
-margin_bottom = 81.4
-size_flags_vertical = 5
-text = "Full Screen"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Options/HBoxContainer"]
 margin_left = 129.0
@@ -102,33 +110,26 @@ custom_constants/separation = 9
 
 [node name="Master Volume" type="HSlider" parent="Options/HBoxContainer/VBoxContainer2"]
 margin_right = 127.0
-margin_bottom = 16.0
+margin_bottom = 13.0
 max_value = 1.0
 step = 0.05
 value = 0.2
 
 [node name="Music Volume" type="HSlider" parent="Options/HBoxContainer/VBoxContainer2"]
-margin_top = 25.0
+margin_top = 22.0
 margin_right = 127.0
-margin_bottom = 41.0
+margin_bottom = 35.0
 max_value = 1.0
 step = 0.05
 value = 0.2
 
 [node name="Sound Effects" type="HSlider" parent="Options/HBoxContainer/VBoxContainer2"]
-margin_top = 50.0
+margin_top = 44.0
 margin_right = 127.0
-margin_bottom = 66.0
+margin_bottom = 57.0
 max_value = 1.0
 step = 0.05
 value = 0.2
-
-[node name="CheckButton" type="CheckButton" parent="Options/HBoxContainer/VBoxContainer2"]
-margin_top = 75.0
-margin_right = 127.0
-margin_bottom = 107.0
-size_flags_vertical = 0
-pressed = true
 
 [node name="Button" type="Button" parent="Options"]
 anchor_left = 0.5
@@ -149,6 +150,16 @@ margin_top = -9.0
 margin_right = 140.0
 margin_bottom = 9.0
 text = "Remap controls"
+
+[node name="CheckButton" type="CheckButton" parent="Options"]
+margin_left = 129.0
+margin_top = 66.0
+margin_right = 149.0
+margin_bottom = 86.0
+size_flags_vertical = 0
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+pressed = true
 
 [node name="Controls" type="Control" parent="."]
 visible = false
@@ -248,7 +259,7 @@ text = "Back"
 [connection signal="value_changed" from="Options/HBoxContainer/VBoxContainer2/Master Volume" to="." method="_on_Master_Volume_value_changed"]
 [connection signal="value_changed" from="Options/HBoxContainer/VBoxContainer2/Music Volume" to="." method="_on_Music_Volume_value_changed"]
 [connection signal="value_changed" from="Options/HBoxContainer/VBoxContainer2/Sound Effects" to="." method="_on_Sound_Effects_value_changed"]
-[connection signal="pressed" from="Options/HBoxContainer/VBoxContainer2/CheckButton" to="." method="_on_CheckButton_pressed"]
 [connection signal="pressed" from="Options/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Options/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Options/CheckButton" to="." method="_on_CheckButton_pressed"]
 [connection signal="pressed" from="Controls/Button" to="." method="_on_Button_pressed"]

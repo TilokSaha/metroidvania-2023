@@ -79,6 +79,7 @@ func _on_Continue_pressed():
 func toggle():
 	visible = !visible
 	get_tree().paused = visible
+	$MainMenu/VBoxContainer/Start.grab_focus()
 	$MainMenu.show()
 	$Options.hide()
 	$Controls.hide()

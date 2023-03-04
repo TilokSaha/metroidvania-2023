@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UnCheckButtonDis.png-1a546417b033876c3948a547c73c6cdc.stex"
+path="res://.import/UnCheckButton.png-03a0677831e63a998161f44e6f01977c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Main Menu/assets/DarkTheme/DarkTheme/Icons/UnCheckButtonDis.png"
-dest_files=[ "res://.import/UnCheckButtonDis.png-1a546417b033876c3948a547c73c6cdc.stex" ]
+source_file="res://ui/Main Menu/assets/DarkTheme/Icons/UnCheckButton.png"
+dest_files=[ "res://.import/UnCheckButton.png-03a0677831e63a998161f44e6f01977c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

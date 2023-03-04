@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CheckedButton.png-9f3bd46ede52251c223a003d75230d18.stex"
+path="res://.import/CheckedButton.png-eb29f4ad180ff9e8ed6336f905868025.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Main Menu/assets/DarkTheme/DarkTheme/Icons/CheckedButton.png"
-dest_files=[ "res://.import/CheckedButton.png-9f3bd46ede52251c223a003d75230d18.stex" ]
+source_file="res://ui/Main Menu/assets/DarkTheme/Icons/CheckedButton.png"
+dest_files=[ "res://.import/CheckedButton.png-eb29f4ad180ff9e8ed6336f905868025.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

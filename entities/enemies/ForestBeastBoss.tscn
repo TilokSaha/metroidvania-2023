@@ -511,7 +511,7 @@ shape = SubResource( 51 )
 
 [node name="HitSoundFX" type="AudioStreamPlayer" parent="." index="12"]
 stream = ExtResource( 16 )
-volume_db = -50.0
+volume_db = -20.0
 bus = "Sound FX"
 
 [node name="BossMusic" type="AudioStreamPlayer" parent="." index="13"]

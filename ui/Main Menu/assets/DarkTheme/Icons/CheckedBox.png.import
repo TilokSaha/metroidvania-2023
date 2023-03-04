@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spinbox.png-3219879ce23135fe110b6abb0ac2c9f2.stex"
+path="res://.import/CheckedBox.png-1164e1d6123bed518118d67ab3fccaeb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Main Menu/assets/DarkTheme/DarkTheme/Icons/spinbox.png"
-dest_files=[ "res://.import/spinbox.png-3219879ce23135fe110b6abb0ac2c9f2.stex" ]
+source_file="res://ui/Main Menu/assets/DarkTheme/Icons/CheckedBox.png"
+dest_files=[ "res://.import/CheckedBox.png-1164e1d6123bed518118d67ab3fccaeb.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
