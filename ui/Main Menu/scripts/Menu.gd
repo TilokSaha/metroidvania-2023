@@ -15,9 +15,10 @@ func _ready():
 	OS.vsync_enabled = false
 	OS.delta_smoothing = false
 	
-	master__volume.value = db2linear(AudioServer.get_bus_volume_db(0))
-	music__volume.value = db2linear(AudioServer.get_bus_volume_db(1))
-	sound__effects.value = db2linear(AudioServer.get_bus_volume_db(2))
+#	master__volume.value = db2linear(AudioServer.get_bus_volume_db(0))
+#	music__volume.value = db2linear(AudioServer.get_bus_volume_db(1))
+#	sound__effects.value = db2linear(AudioServer.get_bus_volume_db(2))
+	#load_sound()
 	
 	center()
 	
@@ -51,6 +52,7 @@ func _on_Button_pressed():
 	$MainMenu.show()
 	$Options.hide()
 	$Controls.hide()
+	#save_sound()
 
 
 func _on_Master_Volume_value_changed(value):
