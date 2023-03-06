@@ -4,6 +4,7 @@ class_name Character
 
 export (Resource) var physics = null
 export (Resource) var health = null
+signal health_changed(damage)
 
 onready var sprite = $AnimatedSprite
 onready var effect = $Effect
@@ -39,9 +40,10 @@ func hurt(amount):
 	health.take_damage(amount)
 
 
-func _on_health_changed(_damage):
+func _on_health_changed(damage):
 	effect.play("Hit_Effect")
 	camera.apply_shake(10)
+	emit_signal("health_changed", damage)
 
 
 func _on_death():
