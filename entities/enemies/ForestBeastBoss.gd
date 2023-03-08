@@ -2,6 +2,7 @@ extends Enemy
 
 onready var hit_sound_fx = $HitSoundFX
 signal dead
+signal dead_buff
 
 
 func _ready():
@@ -14,3 +15,4 @@ func _on_HitBox_body_entered(body):
 
 func _on_death():
 	emit_signal("dead")
+	emit_signal("dead_buff")
