@@ -63,8 +63,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Metroidvania 2023'"
-run/main_scene="res://scenes/main/Map.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://ui/Main Menu/scenes/Menu.tscn"
+config/icon="res://entities/player/knight_idle_anim_f0.png"
 
 [autoload]
 

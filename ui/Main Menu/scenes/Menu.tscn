@@ -1,10 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/Main Menu/assets/DarkTheme/Dark.theme" type="Theme" id=1]
 [ext_resource path="res://ui/Main Menu/scripts/ActionToggleButton.gd" type="Script" id=2]
 [ext_resource path="res://ui/Main Menu/scripts/Menu.gd" type="Script" id=3]
 [ext_resource path="res://ui/Main Menu/assets/DarkTheme/Icons/CheckedBox.png" type="Texture" id=4]
 [ext_resource path="res://ui/Main Menu/assets/DarkTheme/Icons/UnCheckedBox.png" type="Texture" id=5]
+[ext_resource path="res://ui/Main Menu/assets/Misc/16bitdev.png" type="Texture" id=6]
+[ext_resource path="res://ui/Main Menu/assets/BebasNeue-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://ui/Main Menu/assets/Misc/made with godot logo.jpg" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 2
+outline_color = Color( 0.133333, 0.109804, 0.109804, 1 )
+font_data = ExtResource( 7 )
 
 [node name="Menu" type="Control"]
 pause_mode = 2
@@ -251,6 +260,38 @@ margin_left = -22.0
 margin_top = -18.0
 margin_right = 22.0
 text = "Back"
+
+[node name="Author" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -35.0
+margin_right = 314.0
+margin_bottom = 125.0
+rect_scale = Vector2( 0.214895, 0.214895 )
+
+[node name="TextureRect" type="TextureRect" parent="Author"]
+margin_right = 160.0
+margin_bottom = 160.0
+texture = ExtResource( 6 )
+
+[node name="TextureRect2" type="Label" parent="Author"]
+margin_left = 163.0
+margin_top = 52.0
+margin_right = 286.4
+margin_bottom = 106.4
+custom_fonts/font = SubResource( 1 )
+text = "16BitDev"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+rect_scale = Vector2( 0.214396, 0.214396 )
+texture = ExtResource( 8 )
 
 [connection signal="pressed" from="MainMenu/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="MainMenu/VBoxContainer/Start" to="." method="_on_Start_pressed"]
